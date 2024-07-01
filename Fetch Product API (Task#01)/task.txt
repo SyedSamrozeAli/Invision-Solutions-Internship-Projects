@@ -1,0 +1,60 @@
+Issue Type: Task
+
+Summary: Create GET API to Fetch Products with Filters
+
+Description:
+We need a GET API using Node.js and Express to fetch products with filters. The API should support these filters:
+
+Date range (startDate, endDate)
+Brand name (brand)
+Price range (minPrice, maxPrice)
+Keyword search (keyword)
+Requirements:
+
+Set up Node.js project:
+
+Initialize a new Node.js project.
+Install Express.js.
+Create project structure:
+
+Define sample product data with fields: id, name, price, date, and brand.
+Set up the Express server:
+
+Create an endpoint to fetch products.
+Implement filtering:
+
+Date range filter with startDate and endDate query parameters.
+Brand name filter with brand query parameter.
+Price range filter with minPrice and maxPrice query parameters.
+Keyword search filter with keyword query parameter.
+Test the API:
+
+Test various combinations of query parameters to ensure filters work as expected.
+Acceptance Criteria:
+
+The API should return products based on the provided query parameters.
+The API endpoint should be /api/products.
+Filters should return relevant products.
+Sample Product Data:
+
+javascript
+Copy code
+const products = [
+  { id: 1, name: 'Product 1', price: 100, date: '2024-06-01', brand: 'BrandA' },
+  { id: 2, name: 'Product 2', price: 200, date: '2024-06-15', brand: 'BrandB' },
+  { id: 3, name: 'Product 3', price: 300, date: '2024-06-20', brand: 'BrandA' }
+];
+Sample Response:
+
+json
+Copy code
+{
+  "success": true,
+  "status_code": 200,
+  "message": ["Data fetched successfully!"],
+  "data": {
+    "list": [
+      { id: 1, name: 'Product 1', price: 100, date: '2024-06-01', brand: 'BrandA' }
+    ]
+  }
+}
